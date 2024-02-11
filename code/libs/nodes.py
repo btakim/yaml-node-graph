@@ -14,6 +14,12 @@ class ActionNode(GroupNode):
 
     def __init__(self):
         super(ActionNode, self).__init__()
+
+        # create node inputs.
+        self.add_input('in', multi_input=True)
+
+        # create node outputs.
+        self.add_output('out')
         
 # create a node class object inherited from BaseNode.
 class StepNode(BaseNode):
@@ -29,6 +35,12 @@ class StepNode(BaseNode):
 
     def __init__(self):
         super(StepNode, self).__init__()
+
+        # create node inputs.
+        self.add_input('in', multi_input=True)
+
+        # create node outputs.
+        self.add_output('out')
 
 # create a node class object inherited from BaseNode.
 class JobNode(BackdropNode):
